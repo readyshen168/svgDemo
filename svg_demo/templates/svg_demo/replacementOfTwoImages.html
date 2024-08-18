@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Replacement of two images</title>
+</head>
+<body>
+{% load static %}
+    <section style="padding: 0px; margin: 0px; background-image: url({% static 'imgs/1-2.png' %});background-position: 0% 0%;
+    vertical-align: middle; background-size: 20% 20%; visibility: visible; background-repeat: no-repeat">
+        <svg style="display: block; padding: 0px; background-image: url({% static 'imgs/1-1.png' %});background-position:
+        0% 0%; background-size:20% 20%; visibility: visible; background-repeat: no-repeat" viewbox="0 0 600 800">
+        <set attributename="visibility" from="visible" to="hidden" begin="click+1"></set>
+        <animate attributeName="opacity" begin="click" dur="1s" values="1;0" restart="never" fill="freeze"></animate>
+
+
+        </svg>
+    </section>
+</body>
+</html>
